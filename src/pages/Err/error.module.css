@@ -1,0 +1,21 @@
+.err__container {
+  height: 75vh;
+  background: #030f17;
+  display: flex;
+  margin-top: 80px;
+  flex-direction: column;
+}
+
+.flex {
+  text-align: center;
+}
+.flex img {
+  max-width: 400px;
+}
+.flex h1 {
+  margin-top: 30px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.5rem;
+}/*# sourceMappingURL=error.module.css.map */

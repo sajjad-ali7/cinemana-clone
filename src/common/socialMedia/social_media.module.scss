@@ -1,0 +1,14 @@
+@use '../../sass/index';
+
+.social__parent{
+    padding: 10px;
+    display: flex;
+    row-gap: 10px;
+    column-gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    li{
+        flex-basis: calc(100% / 5);
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,59 @@
+.suggested {
+  margin: 50px 0 20px;
+  font-size: 1.3rem;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.recommendation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  transition: 0.5s;
+  -webkit-animation-name: scalling;
+          animation-name: scalling;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.recommendation div img {
+  max-width: 150px;
+  border-radius: 10px;
+}
+.recommendation div img:hover {
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+
+@-webkit-keyframes scalling {
+  0% {
+    padding-top: 0;
+    transform: scale(1);
+  }
+  50% {
+    padding-top: 20px;
+    transform: scale(1.1);
+  }
+  100% {
+    padding-top: 0;
+    transform: scale(1);
+  }
+}
+
+@keyframes scalling {
+  0% {
+    padding-top: 0;
+    transform: scale(1);
+  }
+  50% {
+    padding-top: 20px;
+    transform: scale(1.1);
+  }
+  100% {
+    padding-top: 0;
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=suggest.module.css.map */

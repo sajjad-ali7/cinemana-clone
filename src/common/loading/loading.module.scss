@@ -1,0 +1,136 @@
+
+@mixin skeletonAfter {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(204, 210, 208, 0.45);
+    transition: .5s;
+    animation-name: skeleton;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.hero{
+    min-height: 500px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    .story{
+        height: 340px;
+        width: 50%;
+        overflow: hidden;
+    }
+
+    .slider__container{
+        width: 100vw;
+        height: 200px;
+        display: flex;
+        gap: 20px;
+        .slider{
+            margin-top: 20px;
+            width: 24%;
+            border-radius: 20px;
+            height: 150px;
+            background: #030f17;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            &::after{
+                @include skeletonAfter();
+            }
+
+            @keyframes skeleton {
+                from{
+                left: -100%;
+                }
+                to{
+                    left: 100%
+                }
+            }
+        }
+    }
+
+}
+
+.heading{
+    color : white;
+    width: 40%;
+    height: 30px;
+    margin-top: 20px;
+    background: #030f17;
+    position: relative;
+    &::after{
+        @include skeletonAfter();
+    }
+}
+
+.p{
+    color : white;
+    width: 90%;
+    height: 30px;
+    margin-top: 20px;
+    background: #030f17;
+    position: relative;
+    overflow: hidden;
+    &:last-of-type{
+        width:70%;
+    }
+    &::after{
+        @include skeletonAfter();
+    }
+}
+
+.parent{
+    background: #030f17;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.home__slider {
+    display: flex;
+    gap: 20px;
+    width: 100vw;
+    overflow: hidden;
+    
+    div{
+        height: 200px;
+        width: 15%;
+        position: relative;
+        margin-top: 30px;
+        &::after{
+            @include skeletonAfter();
+        }
+    }
+}
+
+.details{
+    background: #030f17;
+    display: flex;
+    gap: 20px;
+    width: 100vw;
+    height: 300px;
+    @media (max-width: 767px) {
+        flex-direction: column;
+        height: 600px;
+    }
+    div{
+        flex-basis: 50%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .left{
+        border-radius: 20px;
+        &::after{
+            @include skeletonAfter();
+        }
+    }
+
+}

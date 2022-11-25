@@ -1,0 +1,93 @@
+@use '../../sass/index' as *;
+
+.navigation{
+background: $main-color;
+color: $font-color;
+height: $nav-height;
+width: calc(100%);
+
+.container__flex{
+    @include row;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    button{
+        padding: 10px;
+        border-radius: 15px;
+        color: $font-color;
+        font-size: 1rem;
+    }
+}
+}
+
+.search__form{
+    position: relative;
+    flex-basis: 50%;
+    padding: 7px;
+    @include row;
+    align-items: center;
+    gap: 15px;
+    @include breakPoint(mobile){
+        flex-grow: 1;
+    }
+    @include breakPoint(tablet){
+        flex-grow: 1;
+    }
+    span{
+        cursor: pointer;
+    }
+    #search{
+        width: 70%;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        flex-grow: 1;
+        font-size: 1rem;
+      
+
+        &::placeholder{
+            color: rgba(255, 255, 255, 0.398);
+        }
+    }
+}
+
+.search__result{
+    position: absolute;
+    top: 115%;
+    left: 7%;
+    min-width: 500px;
+    max-width: 600px;
+    overflow: hidden;
+
+    @include breakPoint(mobile){
+        min-width: 300px;
+    }
+    background: $main-color;
+    z-index: 22;
+    border-radius: 10px;
+    .result{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 5px;
+        cursor: pointer;
+        img{
+            max-width: 50px;
+        }
+
+        .text{
+           display: flex;
+           flex-direction: column;
+           gap: 5px; 
+        }
+    }
+
+    button{
+        background: $sec-color;
+        padding: 5px;
+        text-align: center;
+        width: 100%;
+        border-radius: 0 !important;
+    }
+}

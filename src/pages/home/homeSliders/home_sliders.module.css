@@ -1,0 +1,120 @@
+.margin {
+  margin-top: 20px;
+}
+
+.swiper__container {
+  margin-top: 20px;
+}
+
+.movie__card {
+  min-width: 70px;
+  cursor: pointer;
+}
+.movie__card img {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+}
+.movie__card p.overview {
+  width: 100%;
+  padding: 10px;
+}
+.movie__card h1 {
+  margin: 10px 0 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+.movie__card span {
+  margin-top: 10px;
+  display: block;
+}
+@media (max-width: 567px) {
+  .movie__card h1 {
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .movie__card span {
+    text-align: center;
+  }
+}
+@media (min-width: 568px) and (max-width: 767px) {
+  .movie__card h1 {
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .movie__card span {
+    text-align: left;
+  }
+}
+.slider__name {
+  margin-top: 20px;
+  font-weight: 400;
+}
+@media (max-width: 567px) {
+  .slider__name {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+}
+
+.main_container {
+  display: flex;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.main_container div {
+  min-width: 100%;
+  height: 70%;
+  margin-top: auto;
+  margin-bottom: auto;
+  transform: translateX(100%);
+  transition: 0.5s;
+  padding: 10px;
+}
+.main_container div p {
+  max-height: 0px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.main_container div button {
+  margin: 10px auto 0;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 16px;
+  color: white;
+}
+.main_container img {
+  min-width: 100%;
+  transition: 0.5s;
+  transform: translateX(0);
+}
+
+.main_container.flip {
+  position: relative;
+  top: 30px;
+  transform: scale(1.3);
+  z-index: 3;
+}
+.main_container.flip div {
+  height: 100% !important;
+}
+.main_container.flip div p {
+  max-height: 150px;
+  padding: 10px;
+  font-size: 0.7rem;
+}
+.main_container.flip div {
+  transform: translateX(-100%);
+}
+.main_container.flip img {
+  transform: translateX(-105%);
+}/*# sourceMappingURL=home_sliders.module.css.map */

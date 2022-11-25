@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="117px" height="64px" viewBox="0 0 117 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 61.2 (101010) - https://sketch.com -->
+    <title>B7E0C7DB-63E8-40A0-9AF6-476EFD889CCC</title>
+    <desc>Created with sketchtool.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="watchlist-placeholder" transform="translate(-1312.000000, -458.000000)">
+            <g id="ic-watchlist-placeholder" transform="translate(1313.000000, 430.000000)">
+                <path d="M38.2229833,89 L15.348225,89 C11.6302552,89 8.40232813,86.4385491 7.55749528,82.8178369 L2,59 L2,59 L50,59 L46.1141347,82.3151919 C45.4712174,86.1726957 42.1336965,89 38.2229833,89 Z" id="Path" stroke="#979797" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M101.222983,89 L78.348225,89 C74.6302552,89 71.4023281,86.4385491 70.5574953,82.8178369 L65,59 L65,59 L113,59 L109.114135,82.3151919 C108.471217,86.1726957 105.133697,89 101.222983,89 Z" id="Path" stroke="#979797" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" transform="translate(89.000000, 74.000000) scale(-1, 1) translate(-89.000000, -74.000000) "></path>
+                <line x1="2" y1="58" x2="37" y2="31" id="Path-8" stroke="#979797" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="78" y1="59" x2="113" y2="32" id="Path-8-Copy" stroke="#979797" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" transform="translate(95.500000, 45.500000) scale(-1, 1) translate(-95.500000, -45.500000) "></line>
+                <line x1="50" y1="71" x2="66" y2="71" id="Path-11-Copy" stroke="#979797" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></line>
+                <line x1="2" y1="59" x2="92" y2="59" id="Path-11" stroke="#979797" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></line>
+                <rect id="area" fill-opacity="0" fill="#D8D8D8" x="0" y="0" width="116" height="116"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

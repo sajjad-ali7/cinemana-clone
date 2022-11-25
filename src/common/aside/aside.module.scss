@@ -1,0 +1,72 @@
+@use '../../sass/index' as *;
+
+$aside-font-color: #b4b8bc;
+aside{
+    transition: .5s;
+    background-color: $main-light-color;
+    color: $aside-font-color;
+    width: 60px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    /* width */
+    
+}
+
+.increase{
+    width: 180px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: bold;
+    padding: 15px 15px  15px 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px black;
+    div{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        span{
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+    img{
+        min-width: 35px;
+        max-width: 35px;
+        display: block;
+    }
+}
+
+
+.geners{
+    @include col;
+    font-size: .9rem;
+    gap: 20px;
+    padding: 5px 15px 5px;
+    margin-top: 10px;
+    li{
+        @include row;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 5px;
+        transition: .5s;
+        &:hover{
+            padding-left: 5px;
+        }
+        span:first-of-type{
+            font-size: 25px;
+        }
+
+        &:last-child{
+            border-bottom: 1px solid $aside-font-color;
+            padding-bottom: 10px;
+        }
+    }
+}

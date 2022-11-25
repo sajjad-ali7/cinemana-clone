@@ -1,0 +1,64 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+.parent div {
+  cursor: pointer;
+}
+.parent img {
+  border-radius: 10px;
+}
+.parent p {
+  margin-top: 10px;
+}
+
+.image__container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.image__container img {
+  min-width: 200px;
+  max-width: 600px;
+}
+.image__container h1 {
+  margin-top: 50px;
+}
+.image__container h1 span {
+  color: #c4170f;
+}
+@media (max-width: 400px) {
+  .image__container h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.login__msg {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.login__msg img {
+  min-width: 200px;
+  max-width: 600px;
+}
+.login__msg h1 {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .login__msg h1 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+}
+.login__msg button {
+  padding: 10px 30px;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  color: white;
+}/*# sourceMappingURL=userlist.module.css.map */

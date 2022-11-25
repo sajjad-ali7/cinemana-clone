@@ -1,0 +1,22 @@
+.filter__wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.filter {
+  width: 150px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.filter button {
+  padding: 10px;
+  background-color: transparent;
+  color: white;
+  width: 50%;
+  font-size: 1rem;
+}
+.filter .active {
+  background: #c4170f;
+}/*# sourceMappingURL=popular.module.css.map */

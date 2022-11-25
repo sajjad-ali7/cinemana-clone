@@ -1,0 +1,40 @@
+$main-color : #030f17;
+$main-light-color : #061520;
+$sec-color : #c4170f;
+$font-color : white;
+$nav-height: 50px;
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin grid($width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($width, 1fr));
+}
+
+@mixin margin-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin breakPoint($device){
+    @if $device == mobile{
+        @media (max-width: 767px){
+            @content;
+        }
+    } @else if $device == tablet {
+        @media (min-width: 768px) and (max-width : 991px){
+            @content;
+        }
+    } @else if $device == desktop{
+        @media (min-width: 992px){
+            @content;
+        }
+    }
+}
