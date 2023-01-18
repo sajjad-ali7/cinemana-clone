@@ -30,10 +30,10 @@ export default function Search() {
 
   let onFormSubmit = (e) => {
     e.preventDefault();
-    if(searchInput !== ""){
-      navigate(`/search/${searchInput}`)
+    if (searchInput !== "") {
+      navigate(`/search/${searchInput}`);
     }
-    setSearchInput('')
+    setSearchInput("");
   };
 
   return (
@@ -52,11 +52,16 @@ export default function Search() {
           placeholder="Search movies & series"
           onChange={(e) => setSearchInput(e.target.value)}
           value={searchInput}
-          autoComplete='off'
-          autoCorrect='off'
+          autoComplete="off"
+          autoCorrect="off"
         />
         {searchData.length > 0 ? (
-          <SearchResult q={searchInput} data={searchData.slice(0, 5)} />
+          <SearchResult
+            setSearchData={setSearchData}
+            q={searchInput}
+            data={searchData.slice(0, 5)}
+            setInputValue={setSearchInput}
+          />
         ) : null}
       </form>
     </>

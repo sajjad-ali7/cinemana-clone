@@ -3,13 +3,22 @@ import apiObj from "../../apiKey";
 import { whenItemClicked } from "../../helper";
 import { useNavigate } from "react-router-dom";
 
-export default function SearchResult({ q, data, setInputValue }) {
+export default function SearchResult({
+  q,
+  data,
+  setInputValue,
+  setSearchData,
+}) {
   let navigate = useNavigate();
   let map = data?.map((e) => {
     return (
       <div
         className={styles.result}
-        onClick={() => whenItemClicked(e, navigate)}
+        onClick={() => {
+          whenItemClicked(e, navigate);
+          setSearchData([]);
+          setInputValue("");
+        }}
         key={e.id}
       >
         <img
@@ -26,7 +35,15 @@ export default function SearchResult({ q, data, setInputValue }) {
   return (
     <div className={styles.search__result}>
       {map}
-      <button onClick={() => navigate(`/search/${q}`)}>Show More</button>
+      <button
+        onClick={() => {
+          navigate(`/search/${q}`);
+          setSearchData([]);
+          setInputValue("");
+        }}
+      >
+        Show More
+      </button>
     </div>
   );
 }
