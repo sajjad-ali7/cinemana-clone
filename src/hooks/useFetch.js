@@ -33,4 +33,3 @@ function useFetch(typee, category, hero) {
 }
 
 export default useFetch;
-//sssssssss
