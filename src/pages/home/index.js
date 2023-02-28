@@ -1,18 +1,15 @@
 import { useEffect } from "react";
 import Footer from "../../common/footer";
 import Navbar from "../../common/nav";
+import { MetaDecorator } from "../../helper";
 import Collection from "./collections";
 import Hero from "./hero";
 import HomeSlider from "./homeSliders";
 
-export default function Home({setTitle}) {
-  
-  useEffect(() => {
-    setTitle('Home')
-    return () => setTitle('Cinemana')
-  },[])
+export default function Home() {
   return (
     <div className={`parent`}>
+      <MetaDecorator title={"Home"} />
       <Navbar />
       <div>
         <Hero />

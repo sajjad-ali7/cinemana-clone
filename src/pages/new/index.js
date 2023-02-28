@@ -3,17 +3,15 @@ import Footer from "../../common/footer";
 import HomeSliderLoading from "../../common/loading/HomeSliderLoading";
 import Navbar from "../../common/nav";
 import Item from "../../common/sectionsItems/Item";
+import { MetaDecorator } from "../../helper";
 import useFetch from "../../hooks/useFetch";
 
-export default function New({setTitle}) {
+export default function New({ setTitle }) {
   let { data, loading } = useFetch("movie", "upcoming");
-  
-  useEffect(() => {
-    setTitle('New Release')
-    return () => setTitle('Cinemana')
-  },[])
+
   return (
     <div className="parent">
+      <MetaDecorator title={"New Release"} />
       <Navbar />
       <div className="container">
         {loading ? (
@@ -29,7 +27,7 @@ export default function New({setTitle}) {
           </div>
         )}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

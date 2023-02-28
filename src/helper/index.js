@@ -1,5 +1,6 @@
 import { getDocs, collection } from "firebase/firestore";
 import { db } from "../config/firebase";
+import { Helmet } from "react-helmet";
 
 export const ratingColor = (rating, styleFile) => {
   if (rating < 5.5) return `${styleFile.red}`;
@@ -38,3 +39,17 @@ export const getData = async (refName, setData, userId) => {
     .filter((e) => e.userId === userId);
   setData(filter);
 };
+
+export const MetaDecorator = ({ title, description, imageUrl, imageAlt }) => (
+  <Helmet>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content={description} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={imageUrl} />
+    <meta property="og:url" content={window.location.href} />
+    <meta name="whatsapp:card" content="summary_large_image" />
+    <meta name="whatsapp:image:alt" content={imageAlt} />
+  </Helmet>
+);

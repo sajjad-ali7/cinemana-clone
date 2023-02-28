@@ -12,10 +12,10 @@ export default function Landing({ showElements }) {
     if (user) return navigate("/home");
   });
 
-  useEffect(() => {
-    showElements(false);
-    return () => showElements(true);
-  }, [showElements]);
+  // useEffect(() => {
+  //   showElements(false);
+  //   return () => showElements(true);
+  // }, [showElements]);
 
   return (
     <div className={styles.bg} style={{ width: "100%" }}>

@@ -1,18 +1,12 @@
 import Navbar from "../../common/nav";
 import styles from "./error.module.css";
 import Suggest from "../../common/suggest/suggest";
-import { useEffect } from "react";
 import Footer from "../../common/footer";
-export default function Error({setTitle}) {
-
-
-  useEffect(() => {
-    setTitle('404')
-    return () => setTitle('Cinemana')
-  },[])
-
+import { MetaDecorator } from "../../helper";
+export default function Error() {
   return (
     <div className="parent">
+      <MetaDecorator title={"404"} />
       <Navbar />
       <div className="container">
         <div className={styles.err__container}>
@@ -26,7 +20,7 @@ export default function Error({setTitle}) {
           <Suggest />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
