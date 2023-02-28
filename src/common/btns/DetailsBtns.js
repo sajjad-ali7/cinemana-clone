@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 export default function DetailsBtns({ data, id }) {
   const [user] = useAuthState(auth);
   const [loginFirst, setLoginFirst] = useState(false);
+  const [isLoadingFavs, setIsLoadingFavs] = useState(false);
+  const [isLoadingWatchList, setIsLoadingWatchList] = useState(false);
 
   useEffect(() => {
     if (loginFirst) {
@@ -20,6 +22,8 @@ export default function DetailsBtns({ data, id }) {
   }, [loginFirst]);
   let onButtonClick = async (data, ref) => {
     if (!user) return setLoginFirst(true);
+    if (ref.path === "favs") setIsLoadingFavs(true);
+    else setIsLoadingWatchList(true);
     await addDoc(ref, {
       userId: user?.uid,
       id,
@@ -28,13 +32,26 @@ export default function DetailsBtns({ data, id }) {
       ItemReleaseDate: data?.first_air_date || data.release_date,
       first_air_date: data.first_air_date || "",
     });
+
+    setIsLoadingFavs(false);
+    setIsLoadingWatchList(false);
   };
 
   return (
     <>
       <div className="relative">
-        <WatchlistButton onButtonClick={onButtonClick} data={data} id={id} />
-        <FavsButton onButtonClick={onButtonClick} data={data} id={id} />
+        <WatchlistButton
+          isLoading={isLoadingWatchList}
+          onButtonClick={onButtonClick}
+          data={data}
+          id={id}
+        />
+        <FavsButton
+          isLoading={isLoadingFavs}
+          onButtonClick={onButtonClick}
+          data={data}
+          id={id}
+        />
         <p
           className={`login_msg ${
             loginFirst ? "show_login_msg" : "hide_login_msg"
