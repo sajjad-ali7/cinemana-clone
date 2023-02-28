@@ -5,17 +5,17 @@ import SigninForm from "./form";
 import { auth } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-export default function Landing({ showElements }) {
+export default function Landing({ setShowElements }) {
   const navigate = useNavigate();
   const [user] = useAuthState(auth);
   useEffect(() => {
     if (user) return navigate("/home");
-  });
+  }, []);
 
-  // useEffect(() => {
-  //   showElements(false);
-  //   return () => showElements(true);
-  // }, [showElements]);
+  useEffect(() => {
+    setShowElements(false);
+    return () => setShowElements(true);
+  }, [setShowElements]);
 
   return (
     <div className={styles.bg} style={{ width: "100%" }}>

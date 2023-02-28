@@ -17,11 +17,11 @@ function App() {
       <Router>
         <AsideModal />
         {showElements ? <Aside /> : ""}
-        <Routes>
-          {routes.map((route) => (
-            <Route {...route} setShowElements={setShowElements} />
-          ))}
-        </Routes>
+          <Routes>
+            {routes(setShowElements).map((route) => (
+              <Route {...route} />
+            ))}
+          </Routes>
       </Router>
     </div>
   );

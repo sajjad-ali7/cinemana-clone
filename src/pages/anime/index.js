@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import Navbar from "../../common/nav";
 import SectionsItems from "../../common/sectionsItems";
 import Footer from "../../common/footer";
